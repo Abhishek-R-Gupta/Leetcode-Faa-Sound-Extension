@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Faakk LeetCode Extension",
+  "version": "4.0",
+  "description": "Plays a meme sound when your LeetCode submission or test run fails.",
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["faakk.wav"],
+      "matches": ["https://leetcode.com/*"]
+    }
+  ]
+}
